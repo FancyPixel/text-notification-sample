@@ -14,6 +14,7 @@
 		650302FF1B28D1F000B80611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650302FD1B28D1F000B80611 /* LaunchScreen.storyboard */; };
 		6503030A1B28D1F000B80611 /* TextNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650303091B28D1F000B80611 /* TextNotificationTests.swift */; };
 		650303151B28D1F000B80611 /* TextNotificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650303141B28D1F000B80611 /* TextNotificationUITests.swift */; };
+		656A7ABE1B296917008C6831 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656A7ABD1B296917008C6831 /* NotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		650303101B28D1F000B80611 /* TextNotificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextNotificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		650303141B28D1F000B80611 /* TextNotificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNotificationUITests.swift; sourceTree = "<group>"; };
 		650303161B28D1F000B80611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		656A7ABD1B296917008C6831 /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		650302F31B28D1F000B80611 /* TextNotification */ = {
 			isa = PBXGroup;
 			children = (
+				656A7ABD1B296917008C6831 /* NotificationHelper.swift */,
 				650302F41B28D1F000B80611 /* AppDelegate.swift */,
 				650302F61B28D1F000B80611 /* ViewController.swift */,
 				650302F81B28D1F000B80611 /* Main.storyboard */,
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656A7ABE1B296917008C6831 /* NotificationHelper.swift in Sources */,
 				650302F71B28D1F000B80611 /* ViewController.swift in Sources */,
 				650302F51B28D1F000B80611 /* AppDelegate.swift in Sources */,
 			);
@@ -481,6 +485,7 @@
 				6503031B1B28D1F000B80611 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6503031C1B28D1F000B80611 /* Build configuration list for PBXNativeTarget "TextNotificationTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +494,7 @@
 				6503031E1B28D1F000B80611 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6503031F1B28D1F000B80611 /* Build configuration list for PBXNativeTarget "TextNotificationUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +503,7 @@
 				650303211B28D1F000B80611 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

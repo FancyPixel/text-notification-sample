@@ -10,16 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var responseLabel: UILabel!
+    
+    @IBAction func scheduleAction() {
+        NotificationHelper.scheduleNotification()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receiveReply:"), name: nil, object: nil)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func receiveReply(notification: NSNotification) {
+        if let info = notification.userInfo as? Dictionary<String,String>, let text = info["text"] {
+            responseLabel.text = text
+        }
     }
-
-
 }
-
