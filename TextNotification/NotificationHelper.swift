@@ -29,10 +29,9 @@ struct NotificationHelper {
     }
 
     static func scheduleNotification() {
-        let now: NSDateComponents = NSCalendar.currentCalendar().components([.Hour, .Minute], fromDate: NSDate())
-
         let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-        let date = cal.dateBySettingHour(now.hour, minute: now.minute + 1, second: 0, ofDate: NSDate(), options: NSCalendarOptions())
+        guard let date = cal.dateByAddingUnit(.Minute, value: 1, toDate: NSDate(), options: NSCalendarOptions()) else { return }
+
         let reminder = UILocalNotification()
         reminder.fireDate = date
         reminder.alertBody = "You can now reply with text"
@@ -42,6 +41,8 @@ struct NotificationHelper {
 
         UIApplication.sharedApplication().scheduleLocalNotification(reminder)
 
-        print("Firing at \(now.hour):\(now.minute+1)")
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        print("Firing at \(formatter.stringFromDate(date))")
     }
 }
